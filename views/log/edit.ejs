@@ -1,0 +1,24 @@
+<!--ediiting log-->
+<h2 class="addLog">edit Logs</h2>
+<form method="POST" action="/log/edit?id=<%=log._id %>">
+    <div class="captainLog">        
+        <label class="form-label">Title</label>
+        <input class="form-control"  name="title" type="text" />
+    </div>
+    <br>
+    <div class="captainLog">        
+        <label class="form-label">Entry</label>
+        <textarea class="form-control" name="entry"></textarea>
+    </div>
+    <br>
+
+    <div class="captainLog">        
+        <label class="form-label">Ship Is Broken</label>
+        <input class="form-control"  name="shipIsBroken" type="text" />
+    </div>
+    <br>
+
+    <div>
+        <button class="btn-lg" type="submit"> Edit Log </button>
+    </div>
+</form>

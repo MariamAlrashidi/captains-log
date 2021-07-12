@@ -1,0 +1,20 @@
+<!--log detail-->
+<h2 class="captainLog">The Captains Log</h2>
+<h2 id="detailsTitle">Log Detail</21>
+
+
+<table class="table table-striped w-50 mx-auto">
+    <tr>
+        <th>Title</th>
+        <th>Entry</th>
+        <th>IsBroken</th>
+        <th>Create At</th>
+    </tr>
+
+    <tr>
+        <td><%= log.title %></td>
+        <td><%= log.entry %></td>
+        <td><%= log.shipIsBroken %></td>
+        <td><%=moment(log.createAt).fromNow() %></td>
+    </tr>
+</table>

@@ -1,0 +1,46 @@
+<!--display all log-->
+<h2 class="addLog">The Captains Log</h2>
+<h2 id="dailyLog">Daily Log</h2>
+
+<table class="table table-striped w-50 mx-auto">
+  <tr>
+    <th>Title</th>
+    <th>Entry</th>
+    <th>IsBroken</th>
+    <th>Created At</th>
+    <th>Edit</th>
+    <th>Delete</th>
+  </tr>
+
+    <% logs.forEach((log)=>{ %>
+  <tr>
+      <td>
+          <a class="dailyLoging" href="/log/detail?id=<%=log._id %>">
+              <%=log.title %>
+          </a>
+      </td>
+      </td>
+      <td>
+          <%=log.entry %>
+      </td>
+      <td>
+          <%=log.shipIsBroken %>
+      </td>
+      <td>
+          <%=moment(log.createAt).fromNow() %>
+      </td>
+      <td>
+          <a href="/log/edit?id=<%=log._id %>">
+              <button id="btnEditting">Edit</button>
+          </a>
+      </td>
+      <td>
+        <a href="/log/delete?id=<%=log._id %>">
+            <button id="btnDelete" type="submit">Delete Log</button>
+          </a>
+      </td>
+  </tr>
+  <% }) %>
+
+
+</table>

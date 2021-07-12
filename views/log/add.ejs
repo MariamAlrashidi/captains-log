@@ -1,0 +1,24 @@
+<!--adding new log-->
+<h2 class="addLog">Add Log</h2> 
+<form method="POST" action="/log/add">
+    <div class="captainLog"> 
+                <label class="form-label" >Title</label>
+        <input class="form-control" name="title" type="text" />
+    </div>
+    <br>
+    <div class="captainLog">
+        <label class="form-label">Entry</label>
+        <textarea class="form-control" name="entry"></textarea>
+    </div>
+    <br>
+
+    <div class="captainLog">
+        <label class="form-label">Ship Is Broken</label>
+        <input class="form-control" name="shipIsBroken" type="text" />
+    </div>
+    <br>
+
+    <div >
+        <button class="btn-lg" type="submit"> Create A Log </button>
+    </div>
+</form>
